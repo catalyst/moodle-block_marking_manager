@@ -153,7 +153,7 @@ class block_fn_marking extends block_list {
                 $this->content->items[] = '<a href="' . $CFG->wwwroot . '/course/view.php?id=' .
                     $this->page->course->id .
                     '">' . $this->page->course->shortname . '</a>';
-                $this->content->icons[] = "<img src=\"" . $OUTPUT->pix_url('i/course') . "\" class=\"icon\" alt=\"\" />";
+                $this->content->icons[] = "<img src=\"" . $OUTPUT->image_url('i/course') . "\" class=\"icon\" alt=\"\" />";
             }
 
             if ($showtitles) {
@@ -238,21 +238,21 @@ class block_fn_marking extends block_list {
                 $this->content->items[] = '<a href="' . $CFG->wwwroot . '/blocks/fn_marking/progress_report.php?id=' .
                     $this->page->course->id .
                     '">' . get_string('simplegradebook', 'block_fn_marking') . '</a>';
-                $this->content->icons[] = "<img src=\"" . $OUTPUT->pix_url('i/grades') . "\" class=\"icon\" alt=\"\" />";
+                $this->content->icons[] = "<img src=\"" . $OUTPUT->image_url('i/grades') . "\" class=\"icon\" alt=\"\" />";
             }
 
             if ($showgradebook) {
                 $this->content->items[] = '<a href="' . $CFG->wwwroot . '/grade/report/grader/index.php?id=' .
                     $this->page->course->id .
                     '">' . get_string('gradebook', 'block_fn_marking') . '</a>';
-                $this->content->icons[] = "<img src=\"" . $OUTPUT->pix_url('i/report') . "\" class=\"icon\" alt=\"\" />";
+                $this->content->icons[] = "<img src=\"" . $OUTPUT->image_url('i/report') . "\" class=\"icon\" alt=\"\" />";
             }
 
             if ($showreportslink) {
                 $this->content->items[] = '<a href="' . $CFG->wwwroot . '/user/index.php?contextid='.$context->id.
                     '&sifirst=&silast=&roleid=5">' .
                     get_string('studentlist', 'block_fn_marking') . '</a>';
-                $this->content->icons[] = "<img src=\"" . $OUTPUT->pix_url('i/group') . "\" class=\"icon\" alt=\"\" />";
+                $this->content->icons[] = "<img src=\"" . $OUTPUT->image_url('i/group') . "\" class=\"icon\" alt=\"\" />";
             }
 
             $now = time();
@@ -382,7 +382,7 @@ class block_fn_marking extends block_list {
                         $humantime = '';
                     }
 
-                    $refreshicon = html_writer::img($OUTPUT->pix_url('refresh_button', 'block_fn_marking'), '', null);
+                    $refreshicon = html_writer::img($OUTPUT->image_url('refresh_button', 'block_fn_marking'), '', null);
                     $refreshbutton = $refreshicon . ' ' . html_writer::link(
                             new moodle_url('/blocks/fn_marking/update_cache.php', array('id' => $this->page->course->id)),
                             get_string('refreshnow', 'block_fn_marking'),
@@ -432,7 +432,7 @@ class block_fn_marking extends block_list {
                         $humantime = '';
                     }
 
-                    $refreshicon = html_writer::img($OUTPUT->pix_url('refresh_button', 'block_fn_marking'), '', null);
+                    $refreshicon = html_writer::img($OUTPUT->image_url('refresh_button', 'block_fn_marking'), '', null);
                     $refreshbutton = $refreshicon . ' ' . html_writer::link(
                             new moodle_url('/blocks/fn_marking/update_cache.php', array('id' => $this->page->course->id)),
                             get_string('refreshnow', 'block_fn_marking'),
